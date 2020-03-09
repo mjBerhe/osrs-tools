@@ -1,0 +1,603 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: box-border;
+    font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: black;
+}
+
+h2 {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: black;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: normal;
+    color: black
+}
+
+body {
+    height: 100%;
+    background-image: url("images/Misc/HydraWallpaper.png");
+    margin: 0 10% 0 10%;
+}
+
+.App {
+    text-align: center;
+}
+
+@media (max-width: 978px) {
+    body {
+        margin: 0;
+    }
+}
+
+.grid-container {
+    background: none;
+    display: grid;
+    grid-template-columns: minmax(1fr, 225px) minmax(1fr, 350px);
+    grid-template-rows: 85px 1fr 1fr;
+}
+
+.title {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background: #9DB6E1;
+    margin: 4px 0px 2px 0px;
+}
+
+.second-row {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 0;
+}
+
+.stat-block {
+    background: #4A6EAB;
+    border: ;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 2px 0 2px 0px;
+    padding: 0 3px 0 10px;
+}
+
+.stat-title {
+    margin: 7.5px 0 7.5px 0;
+    color: black;
+}
+
+.stat-block select {
+    border-radius: 4px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.stat-block input[type=number] {
+    padding-left: 5px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline: none;
+}
+
+.attLabel {
+    margin: 0 0 0 0;
+    width: 120px;
+}
+
+.strLabel {
+    margin: 0 0 0 0;
+    width: 120px;
+}
+
+.attLvl {
+    background: ;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 2.5px 0 2.5px 0;
+}
+
+.strLvl {
+    display: flex;
+    background: ;
+    justify-content: center;
+    align-items: baseline;
+    margin: 2.5px 0 2.5px 0;
+}
+
+.attPotion {
+    display: flex;
+    background: ;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5px 0 2.5px 0;
+    height: 35px;
+}
+
+.attPotion select {
+    width: 170px;
+    margin: 0 10px 0 0;
+}
+
+.strPotion {
+    display: flex;
+    background: ;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5px 0 2.5px 0;
+    height: 35px;
+}
+
+.strPotion select {
+    width: 170px;
+    margin: 0 10px 0 0;
+}
+
+.attPrayer {
+    display: flex;
+    background: ;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    margin: 2.5px 0 2.5px 0;
+}
+
+.attPrayer select {
+    background: ;
+    width: 170px;
+    margin: 0 15px 0 0;
+}
+
+.strPrayer {
+    display: flex;
+    background: ;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    margin: 2.5px 0 2.5px 0;
+}
+
+.strPrayer select {
+    background: ;
+    width: 170px;
+    margin: 0 15px 0 0;
+}
+
+.monster-and-outputs {
+    background: #4A6EAB;
+    margin: 2px 0px 2px 0;
+    padding: 0 5% 0 5%;
+    border: ;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: 40px 150px 53px;
+    grid-template-columns: 1fr;
+}
+
+.monster-container {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    border: ;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.monster-select {
+    background: ;
+    width: 100%;
+    max-width: 400px;
+}
+
+.common-stats {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.final-title {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 7.5px 5px 7.5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.final-outputs {
+    grid-row: 2/3;
+    background: #0F1225;
+    padding: 5px;
+    margin: 0 5px 5px 5px;
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.fo-armorSet-title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1C4180;
+    color: white;
+}
+
+.fo-maxHit-title {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid white;
+    border-bottom: solid white;
+    background: #1C4180;
+    color: white;
+}
+
+.fo-accuracy-title {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5px;
+    border-bottom: solid white;
+    background: #1C4180;
+    color: white;
+}
+
+.fo-dps-title {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1C4180;
+    color: white;
+}
+
+.fo1-title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    background: #9DB6E1;
+    color: black;
+}
+
+.fo1-maxHit {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid white;
+    border-bottom: solid white;
+    background: #9DB6E1;
+}
+
+.fo1-maxHit h4, strong {
+    color: black;
+}
+
+.fo1-accuracy {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5px;
+    border-bottom: solid white;
+    background: #9DB6E1;
+}
+
+.fo1-accuracy h4, strong {
+    color: black;
+}
+
+.fo1-dps {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5px;
+    background: #9DB6E1;
+}
+
+.fo1-dps h4, strong {
+    color: black;
+}
+
+.fo2-title {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    background: #9DB6E1;
+    color: black;
+}
+
+.fo2-maxHit {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid white;
+    border-bottom: solid white;
+    background: #9DB6E1;
+}
+
+.fo2-maxHit h4, strong {
+    color: black;
+}
+
+.fo2-accuracy {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5px;
+    border-bottom: solid white;
+    background: #9DB6E1;
+}
+
+.fo2-accuracy h4, strong {
+    color: black;
+}
+
+.fo2-dps {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5px;
+    background: #9DB6E1;
+}
+
+.fo2-dps h4, strong {
+    color: black;
+}
+
+.equipment-select {
+    background: #9DB6E1;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin: 2px 0px 2px 0px;
+    border-right: ;
+    display: grid;
+    grid-template-columns: 1fr 0.7fr 0.5fr 0.7fr 1fr;
+    grid-template-rows: repeat(5, 60px);
+}
+
+.equipment-select2 {
+    background: #9DB6E1;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin: 2px 0px 2px 0;
+    display: grid;
+    grid-template-columns: 1fr 0.7fr 0.5fr 0.7fr 1fr;
+    grid-template-rows: repeat(5, 60px);
+}
+
+.armor-set1 {
+    padding: 3px 0 0 3px;
+}
+
+.armor-set2 {
+    padding: 3px 0 0 3px;
+}
+
+.weapon-section {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background:;
+}
+
+.weapon-slot {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 11px;
+}
+
+.weapon-slot img {
+    height: 36px;
+    width: 36px;
+    background-image: url("images/Equipment/WeaponSlot.png");
+}
+
+.style-slot {
+    display: flex;
+    height: 17px;
+    justify-content: flex-start;
+    align-items: center;
+    background: "";
+}
+
+.style-select {
+    display: inline-block;
+}
+
+.helm-slot {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.helm-slot img {
+    height: 36px;
+    width: 36px;
+    background-image: url("images/Equipment/HelmSlot.png");
+}
+
+.shield-slot {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    background: "";
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.shield-slot img {
+    height: 36px;
+    width: 36px;
+    background-image: url("images/Equipment/ShieldSlot.png");
+}
+
+.body-slot {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    background: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-slot img {
+    height: 36px;
+    width: 36px;
+    background-image: url("images/Equipment/BodySlot.png");
+}
+
+.leg-slot {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    background: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leg-slot img {
+    height: 36px;
+    width: 36px;
+    background-image: url("images/Equipment/LegSlot.png");
+}
+
+.boot-slot {
+    grid-column: 3/4;
+    grid-row: 5/6;
+    background: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boot-slot img {
+    height: 36px;
+    width: 36px;
+    background-image: url("images/Equipment/BootSlot.png");
+}
+
+.cape-slot {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 15px;
+}
+
+.cape-slot img {
+    height: 36px;
+    width: 36px;
+    background-image: url("images/Equipment/CapeSlot.png");
+}
+
+.glove-slot {
+    grid-column: 2/3;
+    grid-row: 5/6;
+    background: "";
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.glove-slot img {
+    height: 36px;
+    width: 36px;
+    background-image: url("images/Equipment/GloveSlot.png");
+}
+
+.neck-slot {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    background: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px 0 5px;
+}
+
+.neck-slot img {
+    height: 36px;
+    width: 36px;
+    background-image: url("images/Equipment/NeckSlot.png");
+}
+
+.ammo-slot {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    background: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px 0 0;
+}
+
+.ammo-slot img {
+    height: 36px;
+    width: 36px;
+    background-image: url("images/Equipment/AmmoSlot.png");
+}
+
+.ring-slot {
+    grid-column: 4/5;
+    grid-row: 5/6;
+    background: "";
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ring-slot img {
+    height: 36px;
+    width: 36px;
+    background-image: url("images/Equipment/RingSlot.png");
+}
